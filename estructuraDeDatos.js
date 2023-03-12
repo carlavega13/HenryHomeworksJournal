@@ -338,3 +338,141 @@ tree.insert(22);
 console.log(tree);
 console.log(tree.contains(22));
 //#endregion
+//#region css
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    80%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+/** DIV NAVBAR **/
+.divNavBar{
+display: flex;
+width: 100%;
+background-color:#252525;
+height: 200px;
+justify-content: end;
+justify-content: space-between;
+
+margin-bottom: 70px;
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+border-bottom: 0.125em solid #85cd85;
+box-shadow: 0 0.5em 2em 0.1em #008000 ;
+transition: box-shadow 300ms linear;
+
+}
+.divNavBar:hover{
+    box-shadow:  0 0em 1em 0.3em #008000 ;
+    
+    
+
+}
+.buscadorCaja{
+display: flex;
+align-items: center;
+}
+/*?              INPUT               ?*/
+
+.inputSearch{
+border-radius: 0.25em;
+padding: 0.125em 1em;
+border: #0bff01 0.125em solid;
+font-size: 1.5rem;
+letter-spacing: 0.20em;
+background-color: #252525;
+box-shadow: 
+inset 0 0 0.3em 0 #0bff01,
+0 0 0.5em 0 #0bff01 ;
+
+transition: box-shadow 300ms linear;
+
+} 
+
+.inputSearch:hover{
+   box-shadow:  
+    inset 0 0 0.3em 0 #0bff01,
+0 0 1em 0 #0bff01 ;
+
+}
+/*?                 BOTON                **/
+.butonSearch{
+     /* display: flex; */
+font-size: 1.5rem;
+margin: 1.5rem;
+background-color: #252525;
+border: #0bff01 0.125em solid;
+padding: 0.125em 1em;
+letter-spacing:0.20em;
+font-weight: 300;
+cursor: pointer;
+color: #0bff01;
+border-radius: 0.25em;
+text-shadow:
+ 0 0 0.5em currentColor,
+ 0 0 0.05em whitesmoke;
+ box-shadow: 
+ inset 0 0 0.3em 0 #0bff01,
+ 0 0 0.5em 0 #0bff01 ;
+position: relative;
+ transition: background-color 300ms linear;
+}
+
+.butonSearch:hover::after{
+    opacity: 0.3;
+
+
+ 
+}
+.butonSearch:hover{
+    background-color: #0bff01;
+    color: #252525;
+
+   
+}
+.butonSearch::after{
+    pointer-events: none;
+    content: " ";
+    position: absolute;
+    background:#0bff01 ;
+    top: 120%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em)rotateX(40deg)  scale(1, 0.50);
+    opacity: 0;
+    filter: blur(1em);
+
+transition: opacity 300ms linear;
+}
+
+/*?         FOTO             ?*/
+.foto{
+height: 18em;
+cursor: pointer;
+margin-left: 1.5em;
+  filter: drop-shadow(0px 0px  15px #018a01);
+
+}
+.foto:hover{
+    animation: bounce 1s 0s infinite linear ;
+  
+
+    
+}
+
+
+//#endregion
